@@ -43,8 +43,8 @@ const Login = () => {
 		<div className="bg-bgclr flex flex-col items-center justify-center h-[100vh] ">
 			<div className="bg-white  rounded-md w-96 px-4 ">
 				<div className="flex justify-center py-3">
-					{/* <img src={"/assets/logo.png"} alt="talents" className="my-4 block" /> */}
-					<h2 className="text-red-700 font-bold text-xl text-center"> Digital Cardiology <br /> Research Group </h2>
+					{/* <img src={"../../images/logo.svg"} alt="talents" className="my-4 block" /> */}
+					<h2 className="text-blue font-bold text-2xl text-center"> VRD Research Lab</h2>
 				</div>
 
 				<div className="py-10">
@@ -57,7 +57,7 @@ const Login = () => {
 							type="email"
 							placeholder="Email"
 							onBlur={(e) => setEmail(e.target.value)}
-							className="input bg-white input-bordered input-error w-full max-w-md mb-3"
+							className="input bg-white input-bordered input-info  w-full max-w-md mb-3"
 							required
 						/>
 
@@ -65,7 +65,7 @@ const Login = () => {
 							type="password"
 							placeholder="Password"
 							onBlur={(e) => setPassword(e.target.value)}
-							className="input bg-white input-bordered input-error w-full max-w-md mb-3"
+							className="input bg-white input-bordered input-info  w-full max-w-md mb-3"
 							required
 						/>
 

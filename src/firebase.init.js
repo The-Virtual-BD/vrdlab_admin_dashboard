@@ -5,13 +5,14 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-	apiKey: "AIzaSyBos7nAI5LrFQUDxnlfY4Px3-27fahSyso",
-	authDomain: "cardiology-research-group.firebaseapp.com",
-	projectId: "cardiology-research-group",
-	storageBucket: "cardiology-research-group.appspot.com",
-	messagingSenderId: "108478046299",
-	appId: "1:108478046299:web:e43602bc7f769142ec9f7e",
+	apiKey: "AIzaSyD304vUV3yckQaNUZeUQ2ZAfuMioplZ9bU",
+	authDomain: "vrd-lab.firebaseapp.com",
+	projectId: "vrd-lab",
+	storageBucket: "vrd-lab.appspot.com",
+	messagingSenderId: "863284025090",
+	appId: "1:863284025090:web:e07ca8e3714bde2a08541b",
 };
 
 // Initialize Firebase
