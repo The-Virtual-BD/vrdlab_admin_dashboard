@@ -6,7 +6,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useCollection } from "../../actions/reducers";
 import { sidebarMenu } from "../../AllData/staticData";
 
-
 import { signOut } from "firebase/auth";
 import auth from "../../firebase.init";
 
@@ -164,9 +163,7 @@ const Header = () => {
 					<div className="hidden lg:flex items-center gap-2">
 						<div className="text-end">
 							<h3 className="text-lg font-bold">Admin</h3>
-							<p className="text-sm font-semibold">
-								Digital Cardiology Research Group
-							</p>
+							<p className="text-sm font-semibold">VRD Research Lab</p>
 						</div>
 					</div>
 
@@ -189,11 +186,7 @@ const Header = () => {
 							{/* <img src="/assets/admin.png" alt="admin" srcSet="" /> */}
 							<div className="flex flex-col lg:hidden  text-center ">
 								<h3 className="text-lg font-bold">Admin</h3>
-								<p className="text-sm">
-									Digital Cardiology
-									<br />
-									Research Group
-								</p>
+								<p className="text-sm">VRD Research Lab</p>
 							</div>
 
 							{/* publications Sub Menu */}
