@@ -40,14 +40,12 @@ const AddPublication = () => {
 			setSubmitting(false);
 			return;
 		}
-		
+
 		if (!publicationsDesc) {
 			setDescriptionError("*Description is required.");
 			setSubmitting(false);
 			return;
 		}
-
-	
 
 		const newsData = {
 			publiCategory,
@@ -94,8 +92,10 @@ const AddPublication = () => {
 								<option disabled selected>
 									Select Category
 								</option>
-								<option value={"conference"}> Conference Article</option>
-								<option value={"journal"}> Journal Article</option>
+								<option value={"book"}>Books</option>
+								<option value={"journal"}> Journal Articles</option>
+								<option value={"bookC"}> Book Chapters</option>
+								<option value={"conference"}> Conference Articles</option>
 							</select>
 							{cateError && (
 								<p className="text-red-500 text-sm text-start">{cateError}</p>

@@ -151,8 +151,8 @@ const AddArticale = () => {
 										Select Category
 									</option>
 									<option value={"research"}>Research Articale</option>
-									<option value={"public"}>Publi Articale</option>
-									<option value={"common"}>Common Articale</option>
+									<option value={"Review"}>Review Articale</option>
+									<option value={"study"}>Case Study</option>
 								</select>
 								{cateError && (
 									<p className="text-red-500 text-sm text-start">{cateError}</p>
@@ -181,7 +181,7 @@ const AddArticale = () => {
 										Select Type
 									</option>
 									<option value={"open"}>Open Access</option>
-									<option value={"limited"}>Limited Access</option>
+									<option value={"close"}>Close Access</option>
 								</select>
 							</div>
 						</div>
@@ -189,7 +189,7 @@ const AddArticale = () => {
 						<div className="form-control w-full  ">
 							<input
 								type="file"
-								accept=".jpg,.png,.jpeg,.svg"
+								accept=".jpg,.png,.jpeg"
 								onChange={(e) => setProImg(e.target.files[0])}
 								required
 								className="file-input  w-full bg-bgclr"

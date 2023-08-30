@@ -28,7 +28,11 @@ const PublicationDetails = () => {
 				<div className="flex flex-col items-start gap-3">
 					<h3 className="text-start">
 						<span className="font-bold"> Publication Type: </span>
-						{sinNews?.publiCategory}
+						{
+							sinNews?.publiCategory=="book"?"Books":sinNews?.publiCategory=="journal"?"Journal Articles":sinNews?.publiCategory=="bookC"?"Book Chapters":sinNews?.publiCategory=="conference"?"Conference Articles":""
+						}
+
+
 					</h3>
 
 					<p>

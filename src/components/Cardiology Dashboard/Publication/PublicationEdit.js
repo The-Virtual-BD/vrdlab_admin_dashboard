@@ -24,7 +24,7 @@ const PublicationEdit = () => {
 			.then((data) => {
 				setSinPro(data);
 				setNewsDesc(data.publicationsDesc);
-				setLoading(false); 
+				setLoading(false);
 			});
 	}, [id]);
 
@@ -91,8 +91,10 @@ const PublicationEdit = () => {
 								<option disabled selected>
 									Select Category
 								</option>
-								<option value={"conference"}> Conference Article</option>
-								<option value={"journal"}> Journal Article</option>
+								<option value={"book"}>Books</option>
+								<option value={"journal"}> Journal Articles</option>
+								<option value={"bookC"}> Book Chapters</option>
+								<option value={"conference"}> Conference Articles</option>
 							</select>
 						</div>
 
@@ -124,7 +126,6 @@ const PublicationEdit = () => {
 										["indent", "outdent"],
 										["align", "horizontalRule", "list", "table"],
 										["link"],
-										
 									],
 								}}
 								lang="en"
