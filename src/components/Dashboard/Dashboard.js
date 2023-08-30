@@ -10,10 +10,10 @@ import { useCollection } from "../../actions/reducers";
 
 const Dashboard = () => {
 	const navigate = useNavigate();
-	const { products, productsLoading, news, newsLoading, publications, publicationsLoading } =
+	const { products, productsLoading, news, newsLoading, publications, publicationsLoading ,articales, articalesLoading} =
 		useCollection();
 
-	if (productsLoading || newsLoading || publicationsLoading) {
+	if (productsLoading || newsLoading || publicationsLoading || articalesLoading) {
 		return <p>Loading...</p>;
 	}
 
@@ -24,7 +24,7 @@ const Dashboard = () => {
 
 	return (
 		<div className=" text-primary p-3 m-3  rounded-md min-h-screen">
-			<div className=" w-full flex flex-col lg:flex-row items-center justify-between gap-5  mb-5 rounded-md">
+			<div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mb-5 rounded-md">
 				<div className="flex items-center justify-between gap-5 bg-white  p-5 round w-full rounded-md">
 					<div className="text-start">
 						<h2 className="text-xl font-semibold ">Total Publications</h2>
@@ -49,6 +49,16 @@ const Dashboard = () => {
 					<div className="text-start">
 						<h2 className="text-xl font-semibold ">Total Researchers</h2>
 						<p>{news?.length ? news?.length : "0"}</p>
+					</div>
+					<div>
+						<BsFillPersonFill className="text-3xl font-bold text-blue" />
+					</div>
+				</div>
+
+				<div className="flex items-center justify-between gap-5 bg-white  p-5 round w-full rounded-md">
+					<div className="text-start">
+						<h2 className="text-xl font-semibold ">Total Articales</h2>
+						<p>{articales?.length ? articales?.length : "0"}</p>
 					</div>
 					<div>
 						<BsFillPersonFill className="text-3xl font-bold text-blue" />

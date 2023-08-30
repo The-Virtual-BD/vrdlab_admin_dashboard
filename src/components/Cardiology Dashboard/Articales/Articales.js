@@ -281,7 +281,7 @@ const ViewArticale = () => {
 				})
 				.catch((error) => {
 					console.error(error);
-					toast.error("Deleted Failed!");
+					toast.error("Delete Failed!");
 				});
 		}
 		location.reload();
@@ -366,7 +366,7 @@ const ViewArticale = () => {
 					<Table
 						columns={PRODUCTS_COLUMNS()}
 						data={sortProducts}
-						headline={"All Projects"}
+						headline={"All Articales"}
 					/>
 				)}
 			</div>
