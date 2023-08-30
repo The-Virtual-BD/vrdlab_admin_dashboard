@@ -5,6 +5,7 @@ import {
 	BsFileTextFill,
 	BsFillPersonFill,
 	BsHeartPulseFill,
+	BsNewspaper,
 } from "react-icons/bs";
 import { useCollection } from "../../actions/reducers";
 
@@ -61,7 +62,7 @@ const Dashboard = () => {
 						<p>{articales?.length ? articales?.length : "0"}</p>
 					</div>
 					<div>
-						<BsFillPersonFill className="text-3xl font-bold text-blue" />
+						<BsNewspaper className="text-3xl font-bold text-blue" />
 					</div>
 				</div>
 			</div>

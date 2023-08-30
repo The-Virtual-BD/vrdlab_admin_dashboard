@@ -3,6 +3,7 @@ import {
 	BsFileTextFill,
 	BsFillPersonFill,
 	BsHeartPulseFill,
+	BsNewspaper,
 } from "react-icons/bs";
 import { FaRegNewspaper } from "react-icons/fa";
 
@@ -40,7 +41,7 @@ export const sidebarMenu = [
 	{
 		id: 5,
 		name: "Articales",
-		icon: <BsFillPersonFill />,
+		icon: <BsNewspaper />,
 		path: "/admin-dashboard/articale",
 	},
 ];
