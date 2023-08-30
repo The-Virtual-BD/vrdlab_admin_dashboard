@@ -31,3 +31,11 @@ export const fetchPublication = async () => {
 };
 
 
+//Fetch Articales
+export const fetchArticales = async () => {
+    const res = await fetch(`${baseURL}/articale/all`);
+    const data = await res.json();
+    return data?.data;
+};
+
+

@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { useQuery } from "react-query";
 import {
+	fetchArticales,
 	fetchNews,
 	fetchProjects,
 	fetchPublication,
@@ -18,6 +19,7 @@ const CollectionContext = ({ children }) => {
 	const [isViewBlogs, setIsViewBlogs] = useState(false);
 	const [isViewTeam, setIsViewTeam] = useState(false);
 	const [isViewPubli, setIsViewPubli] = useState(false);
+	const [isViewArticale, setIsViewArticale] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(true);
 
 	const [user] = useAuthState(auth);
@@ -27,6 +29,7 @@ const CollectionContext = ({ children }) => {
 	const { data: news, isLoading: newsLoading } = useQuery("news", fetchNews);
 	const { data: team, isLoading: teamLoading } = useQuery("team", fetchTeam);
 	const { data: publications, isLoading: publicationsLoading } = useQuery("publication",fetchPublication);
+	const { data: articales, isLoading: articalesLoading } = useQuery("articales",fetchArticales);
 		
 	const value = {
 		menuOpen,
@@ -39,6 +42,8 @@ const CollectionContext = ({ children }) => {
 		setIsViewBlogs,
 		isViewTeam,
 		setIsViewTeam,
+		isViewArticale,
+		setIsViewArticale,
 		products,
 		productsLoading,
 		news,
@@ -49,6 +54,7 @@ const CollectionContext = ({ children }) => {
 		setIsViewPubli,
 		publications,
 		publicationsLoading,
+		articales,articalesLoading
 	};
 
 	return <APPContext.Provider value={value}>{children}</APPContext.Provider>;

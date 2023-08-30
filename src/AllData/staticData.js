@@ -37,4 +37,10 @@ export const sidebarMenu = [
 		icon: <BsFillPersonFill />,
 		path: "/admin-dashboard/teams",
 	},
+	{
+		id: 5,
+		name: "Articales",
+		icon: <BsFillPersonFill />,
+		path: "/admin-dashboard/articale",
+	},
 ];

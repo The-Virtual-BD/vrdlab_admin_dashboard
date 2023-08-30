@@ -21,6 +21,8 @@ const Header = () => {
 		setIsViewTeam,
 		isViewPubli,
 		setIsViewPubli,
+		isViewArticale,
+		setIsViewArticale,
 	} = useCollection();
 
 	const location = useLocation();
@@ -155,6 +157,29 @@ const Header = () => {
 									} text-sm lg:text-lg  font-semibold  hover:text-blue `}
 								>
 									Add Member
+								</button>
+							</div>
+						)}
+
+						{/*Articale Sub Menu */}
+						{currentPath === "/admin-dashboard/articale" && (
+							<div className="lg:flex items-center gap-4 justify-center hidden">
+								<button
+									onClick={() => setIsViewArticale(false)}
+									className={`${
+										!isViewArticale ? "text-blue" : ""
+									} text-sm lg:text-lg font-semibold hover:text-blue  `}
+								>
+									View Articale
+								</button>
+
+								<button
+									onClick={() => setIsViewArticale(true)}
+									className={`${
+										isViewArticale ? "text-blue" : ""
+									} text-sm lg:text-lg  font-semibold  hover:text-blue `}
+								>
+									Add Articale
 								</button>
 							</div>
 						)}
@@ -301,6 +326,35 @@ const Header = () => {
 										} text-sm text-start px-5 py-2 w-full font-semibold  hover:text-blue hover:bg-white `}
 									>
 										* Add Member
+									</button>
+								</div>
+							)}
+
+							{/* articale Sub Menu */}
+							{currentPath === "/admin-dashboard/articale" && (
+								<div className="flex flex-col items-start  justify-start  mt-5 mb-2 border-b-[1px] border-white lg:hidden">
+									<button
+										onClick={() => {
+											setIsViewArticale(false);
+											setOpen(!open);
+										}}
+										className={`${
+											!isViewArticale ? "text-blue bg-white" : ""
+										} text-sm text-start w-full px-5 py-2  font-semibold hover:text-blue hover:bg-white`}
+									>
+										* View Articale
+									</button>
+
+									<button
+										onClick={() => {
+											setIsViewArticale(true);
+											setOpen(!open);
+										}}
+										className={`${
+											isViewArticale ? "text-blue bg-white" : ""
+										} text-sm text-start px-5 py-2 w-full font-semibold  hover:text-blue hover:bg-white `}
+									>
+										* Add Articale
 									</button>
 								</div>
 							)}

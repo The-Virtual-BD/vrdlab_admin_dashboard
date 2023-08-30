@@ -24,6 +24,9 @@ import PublicationDetails from "./components/Cardiology Dashboard/Publication/Pu
 import TeamEdit from "./components/Cardiology Dashboard/Researchers/TeamEdit";
 import NewsEdit from "./components/Cardiology Dashboard/News/NewsEdit";
 import PublicationEdit from "./components/Cardiology Dashboard/Publication/PublicationEdit";
+import Articales from "./components/Cardiology Dashboard/Articales/Articales";
+import ArticaleDetails from "./components/Cardiology Dashboard/Articales/ArticaleDetails";
+import ArticaleEdit from "./components/Cardiology Dashboard/Articales/ArticaleEdit";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +53,11 @@ function App() {
 						<Route path="/admin-dashboard/teams" element={<Teams />}></Route>
 						<Route path="/admin-dashboard/teams/view/:id" element={<TeamDetails />}></Route>
 						<Route path="/admin-dashboard/teams/edit/:id" element={<TeamEdit />}></Route>
+
+
+						<Route path="/admin-dashboard/articale" element={<Articales />}></Route>
+						<Route path="/admin-dashboard/articale/view/:id" element={<ArticaleDetails />}></Route>
+						<Route path="/admin-dashboard/articale/edit/:id" element={<ArticaleEdit />}></Route>
 
 					    <Route path="/admin-dashboard/publications" element={<Publications />}></Route>
 					    <Route path="/admin-dashboard/publications/view/:id" element={<PublicationDetails />}></Route>
